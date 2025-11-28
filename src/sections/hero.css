@@ -1,0 +1,4 @@
+.hero-left { max-width:640px; }
+.hero-right { display:flex; align-items:center; justify-content:center; }
+.hero .muted { color:var(--muted); }
+.avatar { display:flex; align-items:center; justify-content:center; border-radius:12px; padding:26px; }

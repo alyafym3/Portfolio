@@ -1,0 +1,8 @@
+.nav-hamburger{ display:none; background:transparent; border:none; font-size:20px; cursor:pointer; }
+.desktop-links .nav-link{ background:transparent; border:none; color:var(--text); }
+.desktop-links .nav-link:hover{ text-decoration:underline; }
+
+@media (max-width:800px){
+  .desktop-links{ display:none; }
+  .nav-hamburger{ display:inline-flex; }
+}

@@ -1,0 +1,48 @@
+/* Global styles and CSS variables are in theme.css; this file contains layout tweaks */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1rem 6rem; }
+
+.container { width: 100%; margin: 0 auto; }
+
+.section { padding: 6rem 0; }
+.section--compact { padding: 3rem 0; }
+
+.flex { display: flex; }
+.flex-center { display:flex; align-items:center; justify-content:center; }
+.row { display:flex; gap:1.5rem; }
+
+.muted { color: var(--muted); }
+
+.btn { display:inline-flex; gap:0.5rem; align-items:center; padding:0.6rem 1rem; border-radius:8px; background:var(--primary); color:var(--btn-text); border:none; cursor:pointer; transition: transform .18s ease, box-shadow .18s ease; box-shadow: var(--shadow-sm); text-decoration:none; }
+.btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.btn--ghost { background:transparent; color:var(--text); border:1px solid rgba(255,255,255,0.06); }
+
+.card { background: var(--card); padding:1rem; border-radius:12px; box-shadow: var(--shadow-sm); transition: transform .18s ease, box-shadow .18s ease; }
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+.grid { display:grid; gap:1rem; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* Animations */
+.fade-up { opacity: 0; transform: translateY(18px); transition: all 520ms cubic-bezier(.2,.9,.3,1); }
+.fade-up.in-view { opacity:1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 1000px){
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px){
+  .grid-3 { grid-template-columns: 1fr; }
+  main { padding: 1rem; }
+}
